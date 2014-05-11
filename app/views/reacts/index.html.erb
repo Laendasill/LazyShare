@@ -1,0 +1,28 @@
+<h1>Listing reacts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reacts.each do |react| %>
+      <tr>
+        <td><%= react.name %></td>
+        <td> <%= image_tag react.image_url(:thumb) %>
+        <td><%= link_to 'Show', react %></td>
+        <td><%= link_to 'Edit', edit_react_path(react) %></td>
+        <td><%= link_to 'Destroy', react, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New React', new_react_path %>

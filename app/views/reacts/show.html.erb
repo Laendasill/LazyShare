@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @react.name %>
+  <strong>ID:</strong>
+<%= @react.id %>
+  <strong>Album_id:</strong>
+<%= @react.album_id %>
+  </p>
+  <p> <%= image_tag @react.image_url %></p>
+
+<%= link_to 'Edit', edit_react_path(@react) %> |
+<%= link_to 'Back', reacts_path %>

@@ -1,0 +1,22 @@
+<p>
+  <strong>Name:</strong>
+  <%= @album.name %>
+</p>
+
+<div id="reacts" >
+  <% for react in @album.reacts %>
+    <div class="react">
+      <%= image_tag react.image_url(:thumb) if react.image? %>
+      <%= react.name %>
+      <div class "actions">
+<%= link_to 'Edit', edit_react_path(react) %> |
+<%= link_to 'Remove', react, :confirm => 'Are you sure?', :method => :delete %>
+    </div>
+</div>
+<% end%>
+</div>
+<p>
+<%= link_to "add react", new_react_path(:album_id => @album) %> |
+<%= link_to "View albums", albums_path %>
+
+</p>
