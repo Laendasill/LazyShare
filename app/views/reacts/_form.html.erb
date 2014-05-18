@@ -16,8 +16,8 @@
     <%= f.text_field :name %>
     <%= f.file_field :image %>
     <%= f.label :tag %>
-    <%= f.text_field :tag! %>
-    <%= f.hidden_field :album_id, :value => params[:album_id]  %>
+    <%= f.text_field :tag_list  %>
+    <%= f.hidden_field :album_id, :value => params[:album_id] if params[:album_id].present?  %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -17,8 +17,14 @@ class React < ActiveRecord::Base
   end
 
   def tag(tag)
+    if tag.class == String
+
+   t= Tag.where(name: tag.strip).first_or_create!
+    else
+      t= Tag.where(name: tag.name.strip).first_or_create!
+    end
     # TO DO create new tags if they dont exist
-    Taggings.create(tag_id: tag.id, react_id: self.id)
+    Tagging.create(tag_id: t.id, react_id: self.id)
   end
 
   def tag_list=(names)

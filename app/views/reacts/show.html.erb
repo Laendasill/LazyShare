@@ -7,8 +7,15 @@
 <%= @react.id %>
   <strong>Album_id:</strong>
 <%= @react.album_id %>
+<strong>TAGS:</strong>
+<%= raw @react.tags.map(&:name).map { |p| link_to p, tag_path(p) }.join(', ') %>
   </p>
   <p> <%= image_tag @react.image_url %></p>
 
 <%= link_to 'Edit', edit_react_path(@react) %> |
 <%= link_to 'Back', reacts_path %>
+<div class="dropdown">
+ <a data-toggle="dropdown" href="#"> Trigger </a>
+ <ul class="dropdown-menu" role="menu" >
+   <li> resr </li>
+</div>

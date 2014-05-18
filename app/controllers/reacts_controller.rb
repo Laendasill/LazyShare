@@ -73,6 +73,6 @@ class ReactsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def react_params
-      params.require(:react).permit(:name, :image, :album_id)
+      params.require(:react).permit(:name, :image, :album_id, :tag_list)
     end
 end

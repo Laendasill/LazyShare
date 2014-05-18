@@ -1,6 +1,9 @@
 <h1>Editing react</h1>
-
+<%= image_tag @react.image_url %>
 <%= render 'form' %>
-
+<div class="span8">
+<%= @react.tag_list %>
+  Tags:
+</div>
 <%= link_to 'Show', @react %> |
 <%= link_to 'Back', reacts_path %>
