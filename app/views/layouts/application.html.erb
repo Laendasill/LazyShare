@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>LazyShare</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+%html
+  %head
+  %title LazyShare
+   = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true 
+   = javascript_include_tag "application", "data-turbolinks-track" => true 
+   = csrf_meta_tags 
 
-<%= yield %>
+   %body
 
-</body>
-</html>
+= yield 
+

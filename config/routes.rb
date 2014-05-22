@@ -1,8 +1,10 @@
 LazyShare::Application.routes.draw do
+  get "static_pages/home"
+  get "static_pages/help"
   resources :albums
   resources :reacts
   resources :tags, only: [:create, :destroy]
-  root 'albums#index'
+  root 'static_pages#home'
   match 'tags/:tag', to: 'reacts#index', via: :get
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
