@@ -7,4 +7,12 @@
   = csrf_meta_tags
 
 %body
+  .navbar.navbar-fixed-top.navbar-inverse
+    .navbar-inner
+      .container
+        = link_to "Lazyshare", root_path, :id => "logo"
+        %nav
+          %ul.nav.pull-right
+            %li #{ link_to "Albums", albums_path}
+            %li #{ link_to "Reacts", reacts_path}
 = yield

@@ -6,6 +6,8 @@ gem 'carrierwave'
 
 gem 'rmagick'
 # Use sqlite3 as the database for Active Record
+gem 'bootstrap-sass'
+
 gem 'sqlite3'
 gem 'twitter-bootstrap-rails'
 gem 'less-rails'
@@ -14,7 +16,7 @@ gem 'haml-rails'
 gem 'therubyracer'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
-
+gem 'font-awesome-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
