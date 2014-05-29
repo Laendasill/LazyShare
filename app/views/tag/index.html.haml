@@ -1,0 +1,8 @@
+.table
+  %tr
+    %td
+      Tagi
+  -@tags.each do |q| 
+    %tr
+      %td
+        = link_to q.name, tag_path(raw q.name)

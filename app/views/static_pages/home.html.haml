@@ -1,2 +1,20 @@
-%h1 StaticPages#home
-%p Find me in app/views/static_pages/home.html.haml
+%h1 Lazy share
+%h3 post reaction pictures and annoy peolpe on the internet 
+.container-fluid
+  .col-md-4
+    .span5
+      %table.table-bordered
+        %tbody
+          %th Album
+          %th cover
+          %th Number Of images
+        - @albums.each do |n| 
+          %tr 
+            %td
+              = link_to n.name, album_path(:id => n.id)
+            %td
+              = image_tag n.reacts.first.image_url(:thumb) 
+            %td
+              = n.reacts.count
+    .col-md-4.pull-right
+      Example React: #{image_tag React.find(28).image_url(:thumb)}

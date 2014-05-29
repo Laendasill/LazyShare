@@ -1,7 +1,6 @@
 !!! 
 %html
   %title 
-  Lazyshare
   = stylesheet_link_tag 'application'
   = javascript_include_tag 'application'
   = csrf_meta_tags
@@ -15,4 +14,5 @@
           %ul.nav.pull-right
             %li #{ link_to "Albums", albums_path}
             %li #{ link_to "Reacts", reacts_path}
+            %li #{ link_to "Tags", tags_path} 
 = yield
