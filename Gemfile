@@ -11,7 +11,12 @@ group :development, :test do
 	gem 'sqlite3'
 end
 group :production do
-  gem 'pg'
+ 
+ gem 'pg'
+ gem 'rails_12factor'
+
+  # Heroku deflater
+  gem 'heroku-deflater'
 end
 gem 'twitter-bootstrap-rails'
 gem 'less-rails'
@@ -20,7 +25,7 @@ gem 'haml-rails'
 gem 'therubyracer'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
-gem 'font-awesome-rails'
+#gem 'font-awesome-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
