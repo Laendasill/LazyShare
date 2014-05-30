@@ -7,8 +7,12 @@ gem 'carrierwave'
 gem 'rmagick'
 # Use sqlite3 as the database for Active Record
 gem 'bootstrap-sass'
-
-gem 'sqlite3'
+group :development, :test do
+	gem 'sqlite3'
+end
+group :production do
+  gem 'pg'
+end
 gem 'twitter-bootstrap-rails'
 gem 'less-rails'
 gem 'haml'
